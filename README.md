@@ -13,21 +13,31 @@
 - [Docs](https://docs.sentiment.xyz/)
 - [Twitter](https://twitter.com/sentimentxyz)
 
-# On-chain context
-
-TO FILL IN BY PROTOCOL
-
-```
-DEPLOYMENT: [e.g. mainnet, arbitrum, optimism, ..]
-ERC20: [e.g. any, none, USDC, USDC and USDT]
-ERC721: [e.g. any, none, UNI-V3]
-ADMIN: [trusted, restricted, n/a]
-```
-
 # Audit scope
 
-TBD
+Changes made after the [Sentiment](https://app.sherlock.xyz/audits/contests/1) and [Sentiment Update](https://app.sherlock.xyz/audits/contests/17) contest:
+
+PRs since last Sentiment contest:
+
+1. https://github.com/sentimentxyz/oracle/pull/47
+2. https://github.com/sentimentxyz/controller/pull/50
+3. https://github.com/sentimentxyz/controller/pull/51
+4. https://github.com/sentimentxyz/oracle/pull/48
 
 # About Sentiment
 
-TBD
+> source: [Sentiment Docs](https://docs.sentiment.xyz/core-concepts/overview)
+
+Sentiment is a permissionless undercollateralised onchain credit protocol that allows users to lend and borrow assets with increased capital efficiency and deploy them across DeFi. The two key user groups interacting with the protocol are are Lenders and Borrowers. We outline the value proposition for both of these groups below.
+
+## Sentiment for Lenders
+
+Lenders supply liquidity to the protocol which is then lent out to borrowers as undercollaterised debt. The value proposition for Lenders is straightforward - they supply assets to the protocol with the expectation to earn a yield higher than that in incumbent credit markets.
+
+Lenders interact with the protocol by supplying assets and receiving corresponding interest-bearing LTokens in return. These LTokens act as a receipt of deposit and can be burned at a later point in time to redeem the initial principal and accrued interest on the same.
+
+## Sentiment for Borrowers
+
+Sentiment allows borrowers to create leveraged debt positions against their assets that can be used to interact with other applications across the ecosystem. The value proposition for borrowers is access to undercollterised lines of credit that help leverage their collateral in a capital-efficient manner.
+
+Borrowers interact with the protocol using an Account. Every Sentiment account is a proxy contract that holds the borrower's assets while allowing them delegated control to deploy these assets anywhere. The borrower has complete control on how the assets in an account are deployed subject only to Sentiment's risk measures that help keep the system solvent.
